@@ -2,7 +2,7 @@
 # We often use them for demos and workshops, and Makefiles allow us to provide a consistent language and platform agnostic interface
 # for each project. You do not need to use Makefiles to use Pact in your own project!
 
-GITHUB_ORG="pactflow"
+GITHUB_ORG="muradovmz"
 PACTICIPANT := "ShopOne"
 GITHUB_WEBHOOK_UUID := "58ca703f-4006-496b-8099-a0b9f47897da" # When provider sends verification results, send to github to update status check
 PACT_CLI="docker run --rm -v ${PWD}:${PWD} -e PACT_BROKER_BASE_URL -e PACT_BROKER_TOKEN pactfoundation/pact-cli"
