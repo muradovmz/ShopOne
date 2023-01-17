@@ -8,7 +8,7 @@ GITHUB_WEBHOOK_UUID := "58ca703f-4006-496b-8099-a0b9f47897da" # When provider se
 PACT_CLI="docker run --rm -v ${PWD}:${PWD} -e PACT_BROKER_BASE_URL -e PACT_BROKER_TOKEN pactfoundation/pact-cli"
 
 # Only deploy from main
-ifeq ($(GIT_BRANCH),main)
+ifeq ($(GIT_BRANCH),master)
 	DEPLOY_TARGET=deploy
 else
 	DEPLOY_TARGET=no_deploy
