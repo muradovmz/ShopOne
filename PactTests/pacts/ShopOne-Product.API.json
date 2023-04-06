@@ -13,7 +13,8 @@
         "body": {
           "id": 2,
           "name": "ragaca2",
-          "price": 20
+          "price": 20,
+          "price2": 20
         },
         "headers": {
           "Content-Type": "application/json; charset=utf-8"
@@ -37,6 +38,14 @@
               ]
             },
             "$.price": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.price2": {
               "combine": "AND",
               "matchers": [
                 {

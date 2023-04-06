@@ -82,7 +82,8 @@ namespace PactTests
                 {
                     id = Match.Type(2),
                     name = Match.Type("ragaca2"),
-                    price = Match.Type(20)
+                    price = Match.Type(20),
+                    price2 = Match.Type(20)
                 });
 
             //Act
