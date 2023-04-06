@@ -4,6 +4,53 @@
   },
   "interactions": [
     {
+      "description": "a request to retrieve a product with existing id",
+      "request": {
+        "method": "GET",
+        "path": "/Product/2"
+      },
+      "response": {
+        "body": {
+          "id": 2,
+          "name": "ragaca2",
+          "price": 20
+        },
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "matchingRules": {
+          "body": {
+            "$.id": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.name": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.price": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    },
+    {
       "description": "a request to retrieve all products",
       "request": {
         "method": "GET",
@@ -40,8 +87,8 @@
   ],
   "metadata": {
     "pactRust": {
-      "ffi": "0.4.0",
-      "models": "1.0.4"
+      "ffi": "0.3.11",
+      "models": "0.4.5"
     },
     "pactSpecification": {
       "version": "3.0.0"
