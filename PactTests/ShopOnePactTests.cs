@@ -76,7 +76,7 @@ namespace PactTests
                 .UponReceiving("a request to retrieve a product with existing id")
                 .WithRequest(HttpMethod.Get, "/Product/2")
                 .WillRespond()
-                .WithStatus(System.Net.HttpStatusCode.HttpVersionNotSupported)
+                .WithStatus(System.Net.HttpStatusCode.OK)
                 .WithHeader("Content-Type", "application/json; charset=utf-8")
                 .WithJsonBody(new
                 {
